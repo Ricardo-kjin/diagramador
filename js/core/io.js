@@ -1,7 +1,7 @@
 'use strict'
 
 const axios = require('axios').default;
-const server = require('http').createServer();
+const server = require('https').createServer();
 const io = require('socket.io')(server, {
   cors: {
     origin: '*',
@@ -185,8 +185,8 @@ io.on('connection', (socket) => {
 });
 
 // process.env.PORT ||9090
-server.listen(9090);
-console.log('servidor socket conectado en el puerto 9090');
+server.listen(9090,"0.0.0.0");
+console.log('servidor socket conectado en el puerto '+ process.env.PORT ||9090);
 module.exports = {
   sockets,
   server,
