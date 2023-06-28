@@ -1,6 +1,6 @@
 'use strict'
 const io = require('socket.io-client');
-const socket = io.connect('https://104.196.232.237:6365');
+const socket = io.connect('https://104.196.232.237:'+process.env.PORT ||9090);
 console.log('socket cargado...');
 // console.log(socket['id']);
 // console.log(socket);
