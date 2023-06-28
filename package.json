@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "start": "node js/core/index.js",
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
-    "build": "webpack -p --config webpack/webpack.prod.js",
+    "build": "webpack --optimize-minimize --config webpack/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
